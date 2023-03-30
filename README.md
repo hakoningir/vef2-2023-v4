@@ -1,9 +1,6 @@
-# Úr fyrirlestrum í viku 9 og 10
-
-Til að keyra, látið [sýnilausn að verkefni 3](https://github.com/vefforritun/vef2-2023-v3-synilausn) keyra á port 4000 og keyrið upp þessa lausn:
-
+## Til að keyra upp verkefnið
 ```bash
-PORT=4000 npm run dev
+PORT=4000 npm run start
 ```
 
 og í öðru terminal með þessu projecti:
