@@ -68,10 +68,10 @@ export function DepartmentForm() {
         </div>
         <button>Búa til nýja deild</button>
       </form>
-      {state === 'empty' && <p>engar deildir</p>}
+      {state === 'empty' && <p>Engar deildir</p>}
       {state === 'error' && (
         <>
-          <p>villa við að búa til deild</p>
+          <p>Villa við að búa til deild</p>
           <p>Villur:</p>
           <ul>
             {errors.map((error, i) => {
