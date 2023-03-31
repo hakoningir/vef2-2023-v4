@@ -15,12 +15,13 @@ export function Departments({ title, description }) {
     setState('loading');
     try {
       // await sleep(2)
-      // const fetchdep = fetch("https://hus.onrender.com/")
-      const response = await fetch(generateApiUrl('/Departments/'));
+      // const response = await fetch(generateApiUrl('/Departments/'));
+      const response = await fetch(generateApiUrl("https://localhost:3000"));
       if (!response.ok) {
         throw new Error('not ok');
       }
       const json = await response.json();
+      console.log(json)
       setDepartments(json);
       setState('data');
     } catch (e) {
