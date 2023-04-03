@@ -7,13 +7,12 @@ export function Department({ slug }) {
   // type State = 'empty' | 'data' | 'error' | 'loading'
   const [state, setState] = useState('loading');
   const [department, setDepartment] = useState(null);
-  // const fetchdep = await fetch("https://hus.onrender.com/")
   useEffect(() => {
     async function fetchData() {
       await fetchDepartment();
     }
     fetchData();
-  });
+  },[]);
 
   async function fetchDepartment() {
     setState('loading');

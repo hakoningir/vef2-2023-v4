@@ -16,7 +16,7 @@ export function Departments({ title, description }) {
     try {
       // await sleep(2)
       // const response = await fetch(generateApiUrl('/Departments/'));
-      const response = await fetch(generateApiUrl("https://localhost:3000"));
+      const response = await fetch(generateApiUrl("https://hus.onrender.com"));
       if (!response.ok) {
         throw new Error('not ok');
       }
