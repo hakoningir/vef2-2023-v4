@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { generateApiUrl } from '../../utils/generateApiUrl';
+import { DepartmentForm } from './DepartmentForm';
 export function Departments({ title, description }) {
   // type State = 'empty' | 'data' | 'error' | 'loading'
   const [state, setState] = useState('empty');
@@ -42,7 +43,7 @@ export function Departments({ title, description }) {
             return <li key={i}>{department.title}</li>;
           })}
       </ul>
-      <button onClick={() => fetchDepartments}>Sækja deildir</button>
+      <button onClick={() => DepartmentForm}>Ný deild</button>
     </section>
   );
 }

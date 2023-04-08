@@ -23,12 +23,13 @@ export function DepartmentForm() {
       if (!response.ok) {
         if (response.status >= 400 && response.status < 500) {
           const responseJson = await response.json();
-          console.log(responseJson);
+          console.log("responeJson",responseJson);
           setState('error');
           setErrors(responseJson.errors);
         }
       } else {
-        // const json = await response.json();
+        const json = await response.json();
+        console.log("json",json)
         setState('success');
       }
     } catch (e) {
@@ -50,7 +51,7 @@ export function DepartmentForm() {
     setName(e.target.value);
   };
 
-  console.log(name);
+  console.log("name",name);
 
   return (
     <>
@@ -62,11 +63,11 @@ export function DepartmentForm() {
             id="name"
             type="text"
             value={name}
-            defaultValue="foo"
+            defaultValue=""
             onChange={onInputChange}
           />
         </div>
-        <button>Búa til nýja deild</button>
+        <button onClick={createDepartment(name)}>Búa til nýja deild</button>
       </form>
       {state === 'empty' && <p>Engar deildir</p>}
       {state === 'error' && (
