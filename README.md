@@ -9,3 +9,6 @@ og í öðru terminal með þessu projecti:
 npm install
 npm start
 ```
+
+## Verkefnið er hostað hér
+https://vef2-2023-v4-sigma.vercel.app/
